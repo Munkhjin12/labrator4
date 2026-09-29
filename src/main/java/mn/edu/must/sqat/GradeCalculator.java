@@ -9,7 +9,7 @@ public class GradeCalculator {
             throw new IllegalArgumentException("Оноо 0-100 хооронд байх ёстой: " + score);
         }
         if (score >= 95) return "+A";
-        if (score > 90) return "A";
+        if (score >=90) return "A";
         if (score >= 87) return "B+";
         if (score >= 83) return "B";
         if (score >= 80) return "B-";
