@@ -2,22 +2,16 @@ package mn.edu.must.sqat;
 
 public class GradeCalculator {
 
-    // 95+ -> +A, 90-94 -> A, 87-89 -> B+, 83-86 -> B, 80-82 -> B-, 77-79 -> C+, 73-76 -> C, 70-72 -> C-, 65-69 -> D+, 60-64 -> D-, 0-59 -> F
+    // 90-100 -> A, 80-89 -> B, 70-79 -> C, 60-69 -> D, 0-59 -> F
     // score нь 0-100 хязгаараас гарвал IllegalArgumentException шиднэ
     public String letterGrade(double score) {
         if (Double.isNaN(score) || score < 0 || score > 100) {
             throw new IllegalArgumentException("Оноо 0-100 хооронд байх ёстой: " + score);
         }
-        if (score >= 95) return "+A";
-        if (score >=90) return "A";
-        if (score >= 87) return "B+";
-        if (score >= 83) return "B";
-        if (score >= 80) return "B-";
-        if (score >= 77) return "C+";
-        if (score >= 73) return "C";
-        if (score >= 70) return "C-";
-        if (score >= 65) return "D+";
-        if (score >= 60) return "D-";
+        if (score > 90) return "A";
+        if (score >= 80) return "B";
+        if (score >= 70) return "C";
+        if (score >= 60) return "D";
         return "F";
     }
 

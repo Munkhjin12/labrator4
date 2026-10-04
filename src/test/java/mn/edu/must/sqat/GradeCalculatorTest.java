@@ -17,7 +17,7 @@ class GradeCalculatorTest {
     void ninetyFiveIsA() {
         GradeCalculator calc = new GradeCalculator();
         String grade = calc.letterGrade(95.0);
-        assertEquals("+A", grade);
+        assertEquals("A", grade);
     }
 
     @Test
@@ -27,7 +27,7 @@ class GradeCalculatorTest {
         assertAll(
             () -> assertEquals("B", calc.letterGrade(85.0)),
             () -> assertEquals("C", calc.letterGrade(75.0)),
-            () -> assertEquals("D+", calc.letterGrade(65.0))
+            () -> assertEquals("D", calc.letterGrade(65.0))
         );
     }
 
@@ -50,30 +50,30 @@ class GradeCalculatorTest {
     }
 
     @Test
-    @DisplayName("89.99 оноо B+ дүн байх ёстой (A-ийн хязгаарын доод талд)")
+    @DisplayName("89.99 оноо B дүн байх ёстой (A-ийн хязгаарын доод талд)")
     void eightyNineNinetyNineIsB() {
         GradeCalculator calc = new GradeCalculator();
         String grade = calc.letterGrade(89.99);
-        assertEquals("B+", grade);
+        assertEquals("B", grade);
     }
 
     @Test
-    @DisplayName("60 оноо яг D-, 59.99 оноо F байх ёстой (тэнцэх хязгаар)")
+    @DisplayName("60 оноо яг D, 59.99 оноо F байх ёстой (тэнцэх хязгаар)")
     void sixtyIsDAndFiftyNineNinetyNineIsF() {
         GradeCalculator calc = new GradeCalculator();
         assertAll(
-            () -> assertEquals("D-", calc.letterGrade(60.0)),
+            () -> assertEquals("D", calc.letterGrade(60.0)),
             () -> assertEquals("F", calc.letterGrade(59.99))
         );
     }
 
     @Test
-    @DisplayName("0 ба 100 оноо хүчинтэй хязгаар: F ба +A")
+    @DisplayName("0 ба 100 оноо хүчинтэй хязгаар: F ба A")
     void zeroAndHundredAreValid() {
         GradeCalculator calc = new GradeCalculator();
         assertAll(
             () -> assertEquals("F", calc.letterGrade(0.0)),
-            () -> assertEquals("+A", calc.letterGrade(100.0))
+            () -> assertEquals("A", calc.letterGrade(100.0))
         );
     }
 
@@ -127,7 +127,7 @@ class GradeCalculatorTest {
 
     @ParameterizedTest(name = "letterGrade({0}) = {1}")
     @DisplayName("letterGrade хязгаарын утгууд (parameterized)")
-    @CsvSource({"95,+A", "90,A", "89.99,B+", "87,B+", "86.99,B", "83,B", "82.99,B-", "80,B-", "79.99,C+", "77,C+", "76.99,C", "73,C", "72.99,C-", "70,C-", "69.99,D+", "65,D+", "64.99,D-", "60,D-", "59.99,F", "0,F", "100,+A"})
+    @CsvSource({"100,A", "95,A", "90,A", "89.99,B", "85,B", "80,B", "79.99,C", "75,C", "70,C", "69.99,D", "65,D", "60,D", "59.99,F", "30,F", "0,F"})
     void letterGradeBoundaries(double score, String expected) {
         assertEquals(expected, new GradeCalculator().letterGrade(score));
     }
@@ -145,5 +145,4 @@ class GradeCalculatorTest {
         assertEquals(expected, new GradeCalculator().totalScore(att, lab, q1, q2, exam), 1e-9);
     }
 
-   
 }
