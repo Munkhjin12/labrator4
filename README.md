@@ -28,6 +28,8 @@ OS name: "mac os x", version: "26.3.1", arch: "aarch64", family: "mac"
 - Амжилттай ажилласан тохиолдол: **32** (12 энгийн + 15 `letterGrade` + 5 `totalScore`).
 - `results/mvn-test.txt`: `Tests run: 32, Failures: 0, Errors: 0, Skipped: 0`, `BUILD SUCCESS`.
 - `GradeCalculator`-ийн шатлал: 90–100 → `A`, 80–89 → `B`, 70–79 → `C`, 60–69 → `D`, 60-аас доош → `F`.
+- Хязгаарын тестүүд: 89.99 → `B`, 90 → `A`, 100 → `A`.
+- `.gitignore` нь `target/`, `.idea/`, `.DS_Store`-ийг үл тооцно; тайлангууд `results/` хавтаст байна.
 
 ## Мутацийн үр дүн
 

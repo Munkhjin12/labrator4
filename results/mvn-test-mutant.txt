@@ -24,8 +24,8 @@
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running mn.edu.must.sqat.GradeCalculatorTest
-[ERROR] Tests run: 32, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.091 s <<< FAILURE! -- in mn.edu.must.sqat.GradeCalculatorTest
-[ERROR] mn.edu.must.sqat.GradeCalculatorTest.ninetyIsExactlyA -- Time elapsed: 0.011 s <<< FAILURE!
+[ERROR] Tests run: 32, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.087 s <<< FAILURE! -- in mn.edu.must.sqat.GradeCalculatorTest
+[ERROR] mn.edu.must.sqat.GradeCalculatorTest.ninetyIsExactlyA -- Time elapsed: 0.012 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <A> but was: <B>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -92,8 +92,8 @@ org.opentest4j.AssertionFailedError: expected: <A> but was: <B>
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.754 s
-[INFO] Finished at: 2026-10-04T10:58:03+08:00
+[INFO] Total time:  0.839 s
+[INFO] Finished at: 2026-10-04T11:04:22+08:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.2.5:test (default-test) on project lab04-junit: There are test failures.
 [ERROR] 
